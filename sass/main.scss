@@ -100,8 +100,8 @@ body {
 	}
 	.modal-shadow {
 		position: absolute;
-		width: 100%;
-		height: 100%;
+		width: 100vw;
+		height: 100vh;
 		background-color: rgba(0, 0, 0, 0.65);
 		display: none;
 
@@ -143,7 +143,7 @@ body {
 		}
 
 		.modal-animation {
-			animation: show-modal 0.5s fill-mode;
+			animation: show-modal 3s;
 		}
 	}
 }
@@ -152,7 +152,6 @@ body {
 	0% {
 		opacity: 0;
 	}
-
 	100% {
 		opacity: 1;
 	}
