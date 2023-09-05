@@ -1,3 +1,4 @@
+
 const startBtn = document.querySelector('.start');
 const pauseBtn = document.querySelector('.pause');
 const stopBtn = document.querySelector('.stop');
@@ -7,7 +8,7 @@ const stopwatch = document.querySelector('.stopwatch');
 const time = document.querySelector('.time');
 const timeList = document.querySelector('.time-list');
 
-const infoBtn = document.querySelector('.info');
+const infoBtn = document.querySelector('.fa-question');
 const modalShadow = document.querySelector('.modal-shadow');
 const closeBtn = document.querySelector('.close');
 
@@ -15,6 +16,15 @@ let countTime;
 let seconds = 0;
 let minutes = 0;
 let timesArr = [];
+
+//zmiana koloru
+const colorBtn = document.querySelector('.fa-paint-brush');
+const colorPanel = document.querySelector('.colors');
+const colorOne = document.querySelector('.one');
+const colorTwo = document.querySelector('.two');
+const colorThree = document.querySelector('.three');
+const colorFour = document.querySelector('.four');
+let root = document.documentElement;
 
 const handleStart = () => {
 	clearInterval(countTime);
@@ -103,5 +113,30 @@ archiveBtn.addEventListener('click', showArchive);
 
 infoBtn.addEventListener('click', showModal);
 closeBtn.addEventListener('click', closeModal);
+
+// zmiana kolorów
+colorBtn.addEventListener('click', () => {
+    colorPanel.classList.toggle('show-colors')
+})
+
+colorOne.addEventListener('click', () => {
+    root.style.setProperty('--first-color', 'rgb(250, 20, 6)');
+    root.style.setProperty('--hover-color', 'rgb(209, 33, 24)');
+});
+
+colorTwo.addEventListener('click', () => {
+    root.style.setProperty('--first-color', 'rgb(6, 173, 250)');
+    root.style.setProperty('--hover-color', 'rgb(28, 145, 199)');
+});
+
+colorThree.addEventListener('click', () => {
+    root.style.setProperty('--first-color', 'rgb(8, 159, 36)');
+    root.style.setProperty('--hover-color', 'rgb(5, 118, 26)');
+});
+
+colorFour.addEventListener('click', () => {
+    root.style.setProperty('--first-color', 'rgb(224, 65, 182)');
+    root.style.setProperty('--hover-color', 'rgb(213, 39, 167)');
+});
 
 

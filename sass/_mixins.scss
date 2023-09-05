@@ -5,13 +5,13 @@
 	color: $white;
 	font-size: 22px;
 	background-color: transparent;
-	border: 1px solid $first-color;
+	border: 1px solid var(--first-color);;
 	border-radius: 5px;
 	cursor: pointer;
 	transition: backgroud-color 0.3s;
 }
 
 @mixin button-hover {
-	background-color: #f06d42;
+	background-color: var(--hover-color);
 	outline: none;
 }
